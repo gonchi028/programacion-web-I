@@ -5,8 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crear catalogo</title>
     <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./crear-catalogo.css">
   </head>
   <body>
-    <h1>Crear catalogo</h1>
+    <!-- Navbar -->
+    <header class="p-2 bg-primary">
+      <nav class="container navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Mi Web</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./catalogos.html">Catálogos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./crear-catalogo.html"
+                  >Crear catálogo</a
+                >
+              </li>
+            </ul>
+            <a class="btn btn-secondary me-4" href="./iniciar-sesion.html"
+              >Iniciar Sesión</a
+            >
+            <a class="btn btn-outline-light" href="./registrarse.html"
+              >Registrate</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="mt-5">
+        <h1 class="text-center">Crear catálogo</h1>
+      </section>
+      <section class="my-4">
+        <h3 class="mb-4">Agrega tu producto:</h3>
+        <form id="newProductForm">
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Url Imagen"
+              id="productImage"
+              required
+            />
+            <label for="productImage">Url Imagen</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="ID"
+              id="productId"
+              required
+            />
+            <label for="productId">ID</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nombre"
+              id="productName"
+              required
+            />
+            <label for="productName">Nombre</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Description"
+              id="productDescription"
+              required
+            />
+            <label for="productDescription">Descripcion</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Precio"
+              id="productPrice"
+              required
+              min="0"
+              step="0.01"
+            />
+            <label for="productPrice">Precio</label>
+          </div>
+          <div class="mt-4">
+            <button class="btn btn-secondary px-4">Agregar producto</button>
+          </div>
+        </form>
+        <div class="mt-4">
+          <h4 class="text-center">Mis productos</h4>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <tr>
+                <th scope="row">1</th>
+                <td>
+                  <img
+                    class="table-image"
+                    src="./assets/clothes-1.avif"
+                    alt="ropa"
+                  />
+                </td>
+                <td>1</td>
+                <td>Producto 1</td>
+                <td>Descripcion del producto 1</td>
+                <td>10.90 Bs.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./jquery.js"></script>
+    <script src="./crear-catalogo.js"></script>
   </body>
 </html>

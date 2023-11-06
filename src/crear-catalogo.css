@@ -1,0 +1,13 @@
+td, th {
+  text-align: center;
+  vertical-align: middle;
+}
+tr {
+  cursor: pointer;
+}
+.table-image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
