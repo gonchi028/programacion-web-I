@@ -1,5 +1,25 @@
 let i = 2;
 
+function resaltar(element) {
+  element.classList.toggle('table-secondary');
+}
+
+function eliminar() {
+  $('.table-secondary').remove();
+  i = 1;
+  $('tbody tr th').each(function (index) {
+    $(this).html(i);
+    i++;
+  });
+  $('#total').text(i - 1);
+}
+
+function eliminarTodo() {
+  $('#table-body').html('');
+  i = 0;
+  $('#total').text(i);
+}
+
 $(document).ready(function () {
   $('#newProductForm').submit(function (e) {
     e.preventDefault();
@@ -10,7 +30,7 @@ $(document).ready(function () {
     const price = $('#productPrice').val();
 
     $('#table-body').append(`
-      <tr>
+      <tr onclick="resaltar(this)">
         <th scope="row">${i}</th>
         <td>
           <img
@@ -25,6 +45,7 @@ $(document).ready(function () {
         <td>${price} Bs.</td>
       </tr>
     `);
+    $('#total').html(i);
     i++;
   });
 });
