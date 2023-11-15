@@ -134,7 +134,7 @@ products.forEach(({ id, image, name, price }) => {
       <div class="overflow-hidden">
         <img
           src="${image}"
-          alt="..."
+          alt="${name}"
         />
       </div>
       <div class="card-body">
